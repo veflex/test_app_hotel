@@ -1,0 +1,17 @@
+<ion-menu [content]="content">
+
+    <ion-content>
+        <ion-icon menuClose name="close" class="closeMenu"></ion-icon>
+        <ion-list>
+            <button menuClose class="" ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                <ion-icon name="radio-button-off" class="round"></ion-icon>
+                {{p.title}}
+
+            </button>
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

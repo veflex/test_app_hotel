@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title *ngIf="!isSeachBarOpened">Mercure Hotel</ion-title>
+        <ion-searchbar *ngIf="isSeachBarOpened" showCancelButton="true" (ionCancel)="isSeachBarOpened=false"></ion-searchbar>
+        <ion-buttons end>
+            <button ion-button icon-only *ngIf="!isSeachBarOpened" (tap)="isSeachBarOpened=true">
+                <ion-icon name="search" style="font-size: 30px;"></ion-icon>
+            </button>
+        </ion-buttons>
+
+    </ion-navbar>
+
+    <ion-toolbar no-border>
+        <ion-segment [(ngModel)]="pet">
+            <ion-segment-button value="tout">
+                Tout
+            </ion-segment-button>
+            <ion-segment-button value="quiz">
+                Quiz
+            </ion-segment-button>
+            <ion-segment-button value="couleur">
+                Couleur
+            </ion-segment-button>
+            <ion-segment-button value="insolite">
+                Insolite
+            </ion-segment-button>
+            <ion-segment-button value="mythe">
+                Mythe
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+</ion-content>

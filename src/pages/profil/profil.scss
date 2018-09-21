@@ -1,0 +1,77 @@
+page-profil {
+
+    //sub header style start
+    .sub_header {
+        text-align: center;
+        background: #ebebeb;
+        font-size: 20px;
+        border: 0;
+        outline: 0;
+    }
+
+    //sub header style end
+
+    //tabs parent style start
+
+    #tabs {
+        text-align: center;
+        padding: 15px;
+    }
+
+    //tabs parent style end
+    //style tab start 
+    .tab {
+        font-size: 15px;
+        margin-right: 15px;
+        padding-bottom: 5px;
+        margin: 0 15px 10px 0;
+        display: inline-block;
+        border-bottom: 2px solid transparent;
+    }
+
+    .sign-in:checked + .tab,
+    .sign-up:checked + .tab {
+        color: #FF6631;
+        ;
+        border-color: #511F46;
+    }
+
+    .sign-in,
+    .sign-up,
+        {
+        display: none;
+    }
+
+    //style tab end 
+
+    //style input start
+    .input {
+        border: 0;
+        outline: 0;
+        border-bottom: 2px solid #FF6631;
+        padding: 10px 50px 10px 0;
+        background: rgba(255, 255, 255, .1);
+        margin-bottom: 10px;
+    }
+
+    //style input end
+
+    //form wrapper style start
+    #form_wrapper {
+        padding: 30px 0px 50px 75px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    //form wrapper style end
+
+
+    .is-hidden {
+        display: none;
+    }
+
+
+
+
+
+}
