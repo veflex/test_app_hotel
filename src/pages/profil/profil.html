@@ -1,13 +1,13 @@
 <ion-header>
     <ion-navbar>
         <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
+            <ion-icon class="icon_menu" name="menu"></ion-icon>
         </button>
-        <img *ngIf="!isSeachBarOpened" width="100" height="100" src="./../../../assets/imgs/logo.png" alt="">
+        <img *ngIf="!isSeachBarOpened" class="img_logo" src="./../../../assets/imgs/logo.png" alt="">
         <ion-searchbar *ngIf="isSeachBarOpened" showCancelButton="true" (ionCancel)="isSeachBarOpened=false"></ion-searchbar>
         <ion-buttons end>
             <button ion-button icon-only *ngIf="!isSeachBarOpened" (tap)="isSeachBarOpened=true">
-                <ion-icon name="search" style="font-size: 30px;"></ion-icon>
+                <ion-icon class="icon_menu" name="search"></ion-icon>
             </button>
         </ion-buttons>
 
@@ -33,14 +33,16 @@
             <input id="log_email" placeholder="Email" autocapitalize=off [(ngModel)]="log_email" name="log_email" type="text" class="input">
 
             <input id="log_pass" placeholder="Mot de passe" autocapitalize=off [(ngModel)]="log_pass" name="log_pass" type="password" class="input">
-            <div id="log_checkbox">
-                <input id="log_check" type="checkbox" class="check" checked>
-                <label for="check">
-                    <span class="icon">Rester connect&eacute;(e)</span>
-                </label>
+
+            <div id="log_checkbox" class="checkbox">
+                <input id="log_check" type="checkbox" checked>
+                <label for="log_check"></label>
             </div>
 
 
+            <button id="se_co">SE CONNECTER</button>
+            <button id="facebook">FACEBOOK</button>
+            <a href="#">Mot de passe oublié ?</a>
         </div>
 
         <div id="sign_in" class="sign_in is-hidden">
