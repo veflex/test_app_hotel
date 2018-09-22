@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
     <ion-navbar>
         <button ion-button menuToggle>
             <ion-icon class="icon_menu" name="menu"></ion-icon>
@@ -15,7 +15,7 @@
 </ion-header>
 
 <ion-content>
-    <ion-item class="sub_header">Profil</ion-item>
+    <ion-item no-shadow class="sub_header">Profil</ion-item>
 
     <!--        START INPUT-->
     <div id="tabs">
@@ -33,24 +33,31 @@
             <input id="log_email" placeholder="Email" autocapitalize=off [(ngModel)]="log_email" name="log_email" type="text" class="input">
 
             <input id="log_pass" placeholder="Mot de passe" autocapitalize=off [(ngModel)]="log_pass" name="log_pass" type="password" class="input">
-
-            <div id="log_checkbox" class="checkbox">
-                <input id="log_check" type="checkbox" checked>
-                <label for="log_check"></label>
+            <div id="check_contain">
+                <div id="log_checkbox" class="checkbox">
+                    <input id="log_check" type="checkbox" checked>
+                    <label for="log_check"></label>
+                </div>
+                <label for="log_check">Rester connect&eacute;(e)</label>
             </div>
 
-
-            <button id="se_co">SE CONNECTER</button>
-            <button id="facebook">FACEBOOK</button>
-            <a href="#">Mot de passe oublié ?</a>
+            <div id="button_container">
+                <button id="se_co" class="co_cree">SE CONNECTER</button>
+                <button id="facebook">FACEBOOK</button>
+                <a href="#">Mot de passe oublié ?</a>
+            </div>
         </div>
 
         <div id="sign_in" class="sign_in is-hidden">
             <input id="sign_name" placeholder="Nom d'utilisateur" autocapitalize=off [(ngModel)]="sign_name" name="sign_name" type="text" class="input">
 
-            <input id="sign_name" placeholder="Nom d'utilisateur" autocapitalize=off [(ngModel)]="sign_name" name="sign_name" type="text" class="input">
+            <input id="sign_pass" placeholder="Mot de passe" autocapitalize=off [(ngModel)]="sign_pass" name="sign_pass" type="password" class="input">
 
-            <input id="sign_name" placeholder="Nom d'utilisateur" autocapitalize=off [(ngModel)]="sign_name" name="sign_name" type="text" class="input">
+            <input id="sign_repass" placeholder="Répétez le mot de passe" autocapitalize=off [(ngModel)]="sign_repass" name="sign_repass" type="password" class="input">
+
+            <input id="sign_email" placeholder="Adresse e-mail" autocapitalize=off [(ngModel)]="sign_email" name="sign_email" type="email" class="input">
+
+            <button id="create" class="co_cree">CR&Eacute;ER UN COMPTE</button>
         </div>
 
     </div>

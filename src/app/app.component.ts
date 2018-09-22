@@ -14,7 +14,7 @@ import { AccueilPage } from '../pages/accueil/accueil';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ProfilPage;
+  rootPage: any = AccueilPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -25,7 +25,10 @@ export class MyApp {
     this.pages = [
       { title: 'Profil', component: ProfilPage },
       { title: 'My Room', component: MyRoomPage },
-      { title: 'List', component: ListPage },
+      { title: 'Autours de moi', component: ListPage },
+      { title: 'Mes coups de coeur', component: ListPage },
+      { title: 'Parcours', component: ListPage },
+    
 //      { title: 'Autour de moi', component: AroundMePage },
 //      { title: 'Mes coups de coeur', component: MyCrushsPage },
 //      { title: 'Parcours', component: ParcoursPage }

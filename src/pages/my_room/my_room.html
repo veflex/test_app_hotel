@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
     <ion-navbar>
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
@@ -10,30 +10,29 @@
                 <ion-icon name="search" style="font-size: 30px;"></ion-icon>
             </button>
         </ion-buttons>
-
     </ion-navbar>
-
     <ion-toolbar no-border>
-        <ion-segment [(ngModel)]="pet">
+        <ion-segment [(ngModel)]="pet" no-border>
             <ion-segment-button value="tout">
-                Tout
+                My room
             </ion-segment-button>
             <ion-segment-button value="quiz">
-                Quiz
+                Autour
             </ion-segment-button>
             <ion-segment-button value="couleur">
-                Couleur
+                Mus&eacute;es
             </ion-segment-button>
             <ion-segment-button value="insolite">
-                Insolite
+                Sorties
             </ion-segment-button>
             <ion-segment-button value="mythe">
-                Mythe
+                Bons plans
             </ion-segment-button>
         </ion-segment>
     </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+
 
 </ion-content>

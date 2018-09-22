@@ -1,1 +1,5 @@
-page-my_room {}
+page-my_room {
+    ion-header::after {
+        background-image: none;
+    }
+}
