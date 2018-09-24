@@ -9,7 +9,7 @@ import { NavController } from 'ionic-angular';
 export class MyRoomPage {
 
   constructor(public navCtrl: NavController) {
-
+    this.pet = "my_room";
   }
 
 }

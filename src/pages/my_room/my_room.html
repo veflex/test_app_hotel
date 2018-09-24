@@ -1,38 +1,60 @@
 <ion-header no-border>
-    <ion-navbar>
-        <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title *ngIf="!isSeachBarOpened">Mercure Hotel</ion-title>
-        <ion-searchbar *ngIf="isSeachBarOpened" showCancelButton="true" (ionCancel)="isSeachBarOpened=false"></ion-searchbar>
-        <ion-buttons end>
-            <button ion-button icon-only *ngIf="!isSeachBarOpened" (tap)="isSeachBarOpened=true">
-                <ion-icon name="search" style="font-size: 30px;"></ion-icon>
-            </button>
-        </ion-buttons>
-    </ion-navbar>
-    <ion-toolbar no-border>
-        <ion-segment [(ngModel)]="pet" no-border>
-            <ion-segment-button value="tout">
-                My room
-            </ion-segment-button>
-            <ion-segment-button value="quiz">
-                Autour
-            </ion-segment-button>
-            <ion-segment-button value="couleur">
-                Mus&eacute;es
-            </ion-segment-button>
-            <ion-segment-button value="insolite">
-                Sorties
-            </ion-segment-button>
-            <ion-segment-button value="mythe">
-                Bons plans
-            </ion-segment-button>
-        </ion-segment>
-    </ion-toolbar>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngIf="!isSeachBarOpened">Mercure Hotel</ion-title>
+    <ion-searchbar *ngIf="isSeachBarOpened" showCancelButton="true" (ionCancel)="isSeachBarOpened=false"></ion-searchbar>
+    <ion-buttons end>
+      <button ion-button icon-only *ngIf="!isSeachBarOpened" (tap)="isSeachBarOpened=true">
+        <ion-icon name="search" style="font-size: 30px;"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border>
+    <ion-segment [(ngModel)]="pet" no-border>
+      <ion-segment-button class="segment" value="my_room">
+        My room
+      </ion-segment-button>
+      <ion-segment-button value="around_me">
+        Autour
+      </ion-segment-button>
+      <ion-segment-button value="musees">
+        Mus&eacute;es
+      </ion-segment-button>
+      <ion-segment-button value="sorties">
+        Sorties
+      </ion-segment-button>
+      <ion-segment-button value="bons_plans">
+        Bons plans
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
 
+  <div [ngSwitch]="pet">
+    <div id="wrapper" *ngSwitchCase="'my_room'">
+      <div id="list">
+        Salut
+      </div>
+    </div>
 
+    <div id="wrapper" *ngSwitchCase="'around_me'">
+      <div id="list">
+        around
+      </div>
+    </div>
+    <div id="wrapper" *ngSwitchCase="'musees'">
+      <div id="list">
+        musee
+      </div>
+    </div>
+    <div id="wrapper" *ngSwitchCase="'sorties'">
+      <div id="list">
+        sorties
+      </div>
+    </div>
+  </div>
 </ion-content>

@@ -14,9 +14,9 @@ import { AccueilPage } from '../pages/accueil/accueil';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = AccueilPage;
+  rootPage: any = MyRoomPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
@@ -28,10 +28,10 @@ export class MyApp {
       { title: 'Autours de moi', component: ListPage },
       { title: 'Mes coups de coeur', component: ListPage },
       { title: 'Parcours', component: ListPage },
-    
-//      { title: 'Autour de moi', component: AroundMePage },
-//      { title: 'Mes coups de coeur', component: MyCrushsPage },
-//      { title: 'Parcours', component: ParcoursPage }
+
+      //      { title: 'Autour de moi', component: AroundMePage },
+      //      { title: 'Mes coups de coeur', component: MyCrushsPage },
+      //      { title: 'Parcours', component: ParcoursPage }
     ];
 
   }
