@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { MyRoomPage } from '../pages/my_room/my_room';
+import { FiltrePage } from '../pages/filtre/filtre';
 import { ProfilPage } from '../pages/profil/profil';
 import { ListPage } from '../pages/list/list';
 import { AccueilPage } from '../pages/accueil/accueil';
@@ -14,10 +14,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    MyRoomPage,
-      ProfilPage,
+    FiltrePage,
+    ProfilPage,
     ListPage,
-      AccueilPage
+    AccueilPage
   ],
   imports: [
     BrowserModule,
@@ -26,15 +26,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    MyRoomPage,
-      ProfilPage,
+    FiltrePage,
+    ProfilPage,
     ListPage,
-      AccueilPage
+    AccueilPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

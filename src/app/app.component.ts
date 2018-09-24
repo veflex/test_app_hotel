@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { MyRoomPage } from '../pages/my_room/my_room';
+import { FiltrePage } from '../pages/filtre/filtre';
 import { ProfilPage } from '../pages/profil/profil';
 import { ListPage } from '../pages/list/list';
 import { AccueilPage } from '../pages/accueil/accueil';
@@ -14,7 +14,7 @@ import { AccueilPage } from '../pages/accueil/accueil';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = MyRoomPage;
+  rootPage: any = FiltrePage;
 
   pages: Array<{ title: string, component: any }>;
 
@@ -24,7 +24,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Profil', component: ProfilPage },
-      { title: 'My Room', component: MyRoomPage },
+      { title: 'My Room', component: FiltrePage },
       { title: 'Autours de moi', component: ListPage },
       { title: 'Mes coups de coeur', component: ListPage },
       { title: 'Parcours', component: ListPage },

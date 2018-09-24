@@ -3,13 +3,12 @@ import { NavController } from 'ionic-angular';
 
 
 @Component({
-  selector: 'page-my_room',
-  templateUrl: 'my_room.html'
+  selector: 'page-filtre',
+  templateUrl: 'filtre.html'
 })
-export class MyRoomPage {
-
+export class FiltrePage {
+  filtre: string = "my_room";
   constructor(public navCtrl: NavController) {
-    this.pet = "my_room";
   }
 
 }

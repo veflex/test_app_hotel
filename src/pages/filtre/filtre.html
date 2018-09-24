@@ -12,7 +12,7 @@
     </ion-buttons>
   </ion-navbar>
   <ion-toolbar no-border>
-    <ion-segment [(ngModel)]="pet" no-border>
+    <ion-segment [(ngModel)]="filtre" no-border>
       <ion-segment-button class="segment" value="my_room">
         My room
       </ion-segment-button>
@@ -34,7 +34,7 @@
 
 <ion-content padding>
 
-  <div [ngSwitch]="pet">
+  <div [ngSwitch]="filtre">
     <div id="wrapper" *ngSwitchCase="'my_room'">
       <div id="list">
         Salut

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { MyRoomPage } from './../my_room/my_room';
+import { FiltrePage } from '../filtre/filtre';
 
 
 
@@ -13,11 +13,11 @@ import { MyRoomPage } from './../my_room/my_room';
 export class AccueilPage {
 
   constructor(public navCtrl: NavController) {
-      
+
   }
-    
-    goToHome(): void {
-  this.navCtrl.setRoot(MyRoomPage);
-}
+
+  goToHome(): void {
+    this.navCtrl.setRoot(FiltrePage);
+  }
 
 }
