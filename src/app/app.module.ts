@@ -7,6 +7,13 @@ import { FiltrePage } from '../pages/filtre/filtre';
 import { ProfilPage } from '../pages/profil/profil';
 import { ListPage } from '../pages/list/list';
 import { AccueilPage } from '../pages/accueil/accueil';
+import { StoryPage } from '../pages/hotel_story/story';
+import { BarPage } from '../pages/hotel_bar/bar';
+import { CabPage } from '../pages/hotel_cab/cab';
+import { ServicePage } from '../pages/hotel_service/service';
+import { SpaPage } from '../pages/hotel_spa/spa';
+import { SportPage } from '../pages/hotel_sport/sport';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,7 +24,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     FiltrePage,
     ProfilPage,
     ListPage,
-    AccueilPage
+    AccueilPage,
+    StoryPage,
+    BarPage,
+    CabPage,
+    ServicePage,
+    SpaPage,
+    SportPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +42,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     FiltrePage,
     ProfilPage,
     ListPage,
-    AccueilPage
+    AccueilPage,
+    StoryPage,
+    BarPage,
+    CabPage,
+    ServicePage,
+    SpaPage,
+    SportPage
   ],
   providers: [
     StatusBar,

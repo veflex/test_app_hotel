@@ -3,10 +3,17 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { FiltrePage } from '../pages/filtre/filtre';
-import { ProfilPage } from '../pages/profil/profil';
-import { ListPage } from '../pages/list/list';
-import { AccueilPage } from '../pages/accueil/accueil';
+import { FiltrePage } from './../pages/filtre/filtre';
+import { ProfilPage } from './../pages/profil/profil';
+import { ListPage } from './../pages/list/list';
+import { AccueilPage } from './../pages/accueil/accueil';
+import { StoryPage } from './../pages/hotel_story/story';
+import { BarPage } from '../pages/hotel_bar/bar';
+import { CabPage } from '../pages/hotel_cab/cab';
+import { ServicePage } from '../pages/hotel_service/service';
+import { SpaPage } from '../pages/hotel_spa/spa';
+import { SportPage } from '../pages/hotel_sport/sport';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +21,7 @@ import { AccueilPage } from '../pages/accueil/accueil';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = FiltrePage;
+  rootPage: any = AccueilPage;
 
   pages: Array<{ title: string, component: any }>;
 

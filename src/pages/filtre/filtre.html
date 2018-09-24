@@ -32,29 +32,43 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
 
-  <div [ngSwitch]="filtre">
-    <div id="wrapper" *ngSwitchCase="'my_room'">
-      <div id="list">
-        Salut
+<ion-content fullscreen="true">
+  <ion-content class="card-background-page">
+    <div [ngSwitch]="filtre">
+      <div id="wrapper" *ngSwitchCase="'my_room'">
+        <div id="list">
+          <div class="item" *ngFor="let item of items">
+            <ion-col color="secondary" (tap)="pushPage(item.page)">
+              <ion-card>
+                <img src="{{item.url_image}}" />
+                <div class="card-title-small">{{item.bandename}}</div>
+              </ion-card>
+            </ion-col>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div id="wrapper" *ngSwitchCase="'around_me'">
-      <div id="list">
-        around
+      <div id="wrapper" *ngSwitchCase="'around_me'">
+        <div id="list">
+          around
+        </div>
+      </div>
+      <div id="wrapper" *ngSwitchCase="'musees'">
+        <div id="list">
+          musee
+        </div>
+      </div>
+      <div id="wrapper" *ngSwitchCase="'sorties'">
+        <div id="list">
+          sorties
+        </div>
+      </div>
+      <div id="wrapper" *ngSwitchCase="'bons_plans'">
+        <div id="list">
+          bons plan
+        </div>
       </div>
     </div>
-    <div id="wrapper" *ngSwitchCase="'musees'">
-      <div id="list">
-        musee
-      </div>
-    </div>
-    <div id="wrapper" *ngSwitchCase="'sorties'">
-      <div id="list">
-        sorties
-      </div>
-    </div>
-  </div>
+  </ion-content>
 </ion-content>
