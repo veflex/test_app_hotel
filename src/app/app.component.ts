@@ -7,12 +7,8 @@ import { FiltrePage } from './../pages/filtre/filtre';
 import { ProfilPage } from './../pages/profil/profil';
 import { ListPage } from './../pages/list/list';
 import { AccueilPage } from './../pages/accueil/accueil';
-import { StoryPage } from './../pages/hotel_story/story';
-import { BarPage } from '../pages/hotel_bar/bar';
-import { CabPage } from '../pages/hotel_cab/cab';
-import { ServicePage } from '../pages/hotel_service/service';
-import { SpaPage } from '../pages/hotel_spa/spa';
-import { SportPage } from '../pages/hotel_sport/sport';
+import { MyRoomPage } from './../pages/my_room/my_room';
+
 
 
 @Component({
@@ -22,19 +18,19 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = AccueilPage;
-
-  pages: Array<{ title: string, component: any }>;
-
+  public filtre: string;
+  pages: Array<{ title: string, component: any, id: any }>;
+  FiltrePageAround: "FiltrePageAround";
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Profil', component: ProfilPage },
-      { title: 'My Room', component: FiltrePage },
-      { title: 'Autours de moi', component: ListPage },
-      { title: 'Mes coups de coeur', component: ListPage },
-      { title: 'Parcours', component: ListPage },
+      { title: 'Profil', component: ProfilPage, id: "profil" },
+      { title: 'My Room', component: FiltrePage, id: "my_room" },
+      { title: 'Autours de moi', component: FiltrePage, id: "around_me" },
+      { title: 'Mes coups de coeur', component: ListPage, id: "crush" },
+      { title: 'Parcours', component: ListPage, id: "where_to" },
 
       //      { title: 'Autour de moi', component: AroundMePage },
       //      { title: 'Mes coups de coeur', component: MyCrushsPage },
@@ -56,5 +52,12 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+
+
+  }
+
+  openUrl = function (url) {
+    window.open(url, '_system', 'location=yes');
+    return false;
   }
 }

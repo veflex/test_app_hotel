@@ -1,0 +1,40 @@
+page-my_room {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .sub_header {
+    text-align: center;
+    background: $grey;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+  }
+
+  .toolbar-md,
+  .toolbar-ios {
+    padding: 0;
+  }
+
+  .toolbar-title-md,
+  .toolbar-title-ios {
+    text-align: center;
+  }
+
+  .item-ios.item-block .item-inner,
+  .item-md.item-block .item-inner {
+    border: 0;
+  }
+
+
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    margin: 5% 0 10%;
+  }
+
+
+}

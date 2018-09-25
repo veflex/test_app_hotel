@@ -4,8 +4,13 @@ page-filtre {
   // STYLE FILTER TOOLBAR START
   .toolbar-ios .segment-ios,
   .toolbar-md .segment-md {
-    background: rgb(226, 222, 222);
+    background: $grey;
   }
+
+  .filter {
+    height: 50px;
+  }
+
 
   .segment-ios .segment-button,
   .segment-md .segment-button {
@@ -15,7 +20,7 @@ page-filtre {
 
   .segment-ios .segment-button.segment-activated,
   .segment-md .segment-button.segment-activated {
-    background: rgb(226, 222, 222);
+    background: $grey;
     color: $gold;
     border-bottom: 2px solid $gold;
   }
@@ -28,6 +33,11 @@ page-filtre {
   .toolbar-md,
   .toolbar-ios {
     padding: 0;
+  }
+
+  .toolbar-title-md,
+  .toolbar-title-ios {
+    text-align: center;
   }
 }
 
@@ -73,11 +83,7 @@ page-filtre {
     overflow: unset;
   }
 
-  // .card-ios,
-  // .card-md {
-  //   width: 35%;
-  //   height: 25%;
-  // }
+
 
   /* -- position of title of card --*/
   .card-title-small {

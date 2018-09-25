@@ -1,16 +1,61 @@
 <ion-menu [content]="content">
 
-    <ion-content>
-        <ion-icon menuClose name="close" class="closeMenu"></ion-icon>
-        <ion-list>
-            <button menuClose class="" ion-item *ngFor="let p of pages" (click)="openPage(p)">
-                <ion-icon name="radio-button-off" class="round"></ion-icon>
-                {{p.title}}
+  <ion-content>
+    <ion-icon menuClose name="close" class="closeMenu"></ion-icon>
+    <ion-list>
+      <button id={{p.id}} no-border menuClose ion-item *ngFor="let p of pages">
+        <ion-icon name="radio-button-off" class="round"></ion-icon>
+        {{p.title}}
+      </button>
 
-            </button>
-        </ion-list>
-    </ion-content>
-
+    </ion-list>
+  </ion-content>
+  <ion-footer align="center" no-border id="myFooterMenu">
+    <ion-toolbar>
+      <ion-grid>
+        <!--** first row  **-->
+        <ion-row class="media-icons">
+          <ion-col>
+            <a target="_blank" (click)="openUrl('https://www.facebook.com/culturmoov/')">
+              <ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col>
+            <a target="_blank" (click)="openUrl('https://twitter.com/romainprevalet')">
+              <ion-icon ios="logo-twitter" md="logo-twitter"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col>
+            <a target="_blank" (click)="openUrl('https://www.linkedin.com/company/10930522/')">
+              <ion-icon ios="logo-linkedin" md="logo-linkedin"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col>
+            <a target="_blank" (click)="openUrl('https://www.instagram.com/culturmoov/?hl=en')">
+              <ion-icon ios="logo-instagram" md="logo-instagram"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col>
+            <a target="_blank" (click)="openUrl('https://www.youtube.com/channel/UCagf1CqajknsFZJlG8nov5g')">
+              <ion-icon ios="logo-youtube" md="logo-youtube"></ion-icon>
+            </a>
+          </ion-col>
+        </ion-row>
+        <!--** second row  **-->
+        <ion-row class="media-icons">
+          <ion-col>
+            <a target="_blank" style="font-size:14px" (click)="openUrl('http://163.172.230.30:8000/culturmoovappli/CGU.pdf')">CGU</a>
+          </ion-col>
+          <ion-col (click)="OpenApropos()">
+            A propos
+          </ion-col>
+          <ion-col (click)="OpenContact()">
+            Contact
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-footer>
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->

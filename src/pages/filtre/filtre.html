@@ -11,13 +11,15 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-  <ion-toolbar no-border>
+
+  <!-- FILTER TOOLBAR START -->
+  <ion-toolbar no-border class="filter">
     <ion-segment [(ngModel)]="filtre" no-border>
       <ion-segment-button class="segment" value="my_room">
         My room
       </ion-segment-button>
       <ion-segment-button value="around_me">
-        Autour
+        Autour de moi
       </ion-segment-button>
       <ion-segment-button value="musees">
         Mus&eacute;es
@@ -30,16 +32,18 @@
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
+  <!-- FILTER TOOLBAR END -->
 </ion-header>
 
 
 <ion-content fullscreen="true">
   <ion-content class="card-background-page">
+    <!-- FIRST TAB STATIC TO PRESENT THE HOTEL -->
     <div [ngSwitch]="filtre">
       <div id="wrapper" *ngSwitchCase="'my_room'">
         <div id="list">
           <div class="item" *ngFor="let item of items">
-            <ion-col color="secondary" (tap)="pushPage(item.page)">
+            <ion-col color="secondary" (tap)="pushPage(item)">
               <ion-card>
                 <img src="{{item.url_image}}" />
                 <div class="card-title-small">{{item.bandename}}</div>
@@ -49,21 +53,26 @@
         </div>
       </div>
 
+      <!-- SECOND TAB AROUND ME DISPLAYS ACTIVITY AROUND YOUR LOCATION -->
+
       <div id="wrapper" *ngSwitchCase="'around_me'">
         <div id="list">
           around
         </div>
       </div>
+      <!-- THIRD TAB MUSEES FILTERS MUSEUMS -->
       <div id="wrapper" *ngSwitchCase="'musees'">
         <div id="list">
           musee
         </div>
       </div>
+      <!-- FORTH TAB SORTIES FILTERS NICE SPOTS -->
       <div id="wrapper" *ngSwitchCase="'sorties'">
         <div id="list">
           sorties
         </div>
       </div>
+      <!-- FIFTH TAB BON PLANS FILTERS GOOD DEALS -->
       <div id="wrapper" *ngSwitchCase="'bons_plans'">
         <div id="list">
           bons plan
