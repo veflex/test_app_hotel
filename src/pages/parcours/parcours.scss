@@ -1,0 +1,142 @@
+page-parcours {
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .sub_header {
+    text-align: center;
+    background: $grey;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+  }
+
+  .toolbar-md,
+  .toolbar-ios {
+    padding: 0;
+  }
+
+  .toolbar-title-md,
+  .toolbar-title-ios {
+    text-align: center;
+  }
+
+  .item-ios.item-block .item-inner,
+  .item-md.item-block .item-inner {
+    border: 0;
+  }
+
+
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    margin: 5% 0 10%;
+  }
+
+  .card-background-page {
+    ion-icon {
+      font-size: 30px; //Preferred size here
+      margin-left: 5px;
+      color: white;
+    }
+
+    .blur {
+      max-height: 150px;
+      position: relative;
+      margin: 0px;
+      margin-bottom: 10px;
+      display: inline-block;
+      width: 100%;
+      /* make the div not 100% */
+    }
+
+    .card-md {
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 100%;
+
+    }
+
+    @media (min-width:961px) {
+
+      /* tablet, landscape iPad, lo-res laptops ands desktops */
+      .blur {
+        max-height: 250px;
+        position: relative;
+        display: inline-block;
+        /* make the div not 100% */
+      }
+    }
+
+    @media (min-width:1025px) {
+
+      /* big landscape tablets, laptops, and desktops */
+      .blur {
+        max-height: 300px;
+        position: relative;
+        display: inline-block;
+        /* make the div not 100% */
+      }
+    }
+
+    @media (min-width:1281px) {
+
+      /* hi-res laptops and desktops */
+      .blur {
+        max-height: 350px;
+        position: relative;
+        display: inline-block;
+        /* make the div not 100% */
+      }
+    }
+
+    /* the 'blur' effect */
+    .blur:before {
+      content: '';
+      background-color: #000;
+      opacity: 0.3;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+    }
+
+    .blur img {
+      display: block;
+      /* remove bottom space */
+      margin-top: -20%;
+    }
+
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+
+    .card-title {
+      position: absolute;
+      top: 46%;
+      font-size: 2.5em;
+      width: 100%;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+
+  }
+
+
+}

@@ -11,23 +11,22 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-
   <!-- FILTER TOOLBAR START -->
   <ion-toolbar no-border class="filter">
     <ion-segment [(ngModel)]="filtre" no-border>
       <ion-segment-button class="segment" value="my_room">
         My room
       </ion-segment-button>
-      <ion-segment-button value="around_me">
+      <ion-segment-button value="around_me" (tap)="changeContenu('around')">
         Autour de moi
       </ion-segment-button>
-      <ion-segment-button value="musees">
+      <ion-segment-button value="musees" (tap)="changeContenu('musee')">
         Mus&eacute;es
       </ion-segment-button>
-      <ion-segment-button value="sorties">
+      <ion-segment-button value="sorties" (tap)="changeContenu('sortie')">
         Sorties
       </ion-segment-button>
-      <ion-segment-button value="bons_plans">
+      <ion-segment-button value="bons_plans" (tap)="changeContenu('plan')">
         Bons plans
       </ion-segment-button>
     </ion-segment>
@@ -36,14 +35,17 @@
 </ion-header>
 
 
+
+
 <ion-content fullscreen="true">
+
   <ion-content class="card-background-page">
     <!-- FIRST TAB STATIC TO PRESENT THE HOTEL -->
     <div [ngSwitch]="filtre">
       <div id="wrapper" *ngSwitchCase="'my_room'">
         <div id="list">
-          <div class="item" *ngFor="let item of items">
-            <ion-col color="secondary" (tap)="pushPage(item)">
+          <div class="item" *ngFor="let item of my_room">
+            <ion-col color="secondary" (tap)="pushPageRoom(item)">
               <ion-card>
                 <img src="{{item.url_image}}" />
                 <div class="card-title-small">{{item.bandename}}</div>
@@ -57,25 +59,57 @@
 
       <div id="wrapper" *ngSwitchCase="'around_me'">
         <div id="list">
-          around
+          <div class="item" *ngFor="let item of all">
+            <ion-col color="secondary" (tap)="pushPageItem(item)">
+              <!-- <ion-card>
+                <img src="{{item.url_image}}" />
+                <div class="card-title-small">{{item.bandename}}</div>
+              </ion-card> -->
+              <div>{{item.name}}</div>
+            </ion-col>
+          </div>
         </div>
       </div>
       <!-- THIRD TAB MUSEES FILTERS MUSEUMS -->
       <div id="wrapper" *ngSwitchCase="'musees'">
         <div id="list">
-          musee
+          <div class="item" *ngFor="let item of items">
+            <ion-col color="secondary" (tap)="pushPageItem(item)">
+              <!-- <ion-card>
+                <img src="{{item.url_image}}" />
+                <div class="card-title-small">{{item.bandename}}</div>
+              </ion-card> -->
+              <div> {{item.name}} </div>
+            </ion-col>
+          </div>
         </div>
       </div>
       <!-- FORTH TAB SORTIES FILTERS NICE SPOTS -->
       <div id="wrapper" *ngSwitchCase="'sorties'">
         <div id="list">
-          sorties
+          <div class="item" *ngFor="let item of items">
+            <ion-col color="secondary" (tap)="pushPageItem(item)">
+              <!-- <ion-card>
+                <img src="{{item.url_image}}" />
+                <div class="card-title-small">{{item.bandename}}</div>
+              </ion-card> -->
+              <div> {{item.name}} </div>
+
+            </ion-col>
+          </div>
         </div>
       </div>
       <!-- FIFTH TAB BON PLANS FILTERS GOOD DEALS -->
       <div id="wrapper" *ngSwitchCase="'bons_plans'">
         <div id="list">
-          bons plan
+          <div class="item" *ngFor="let item of items">
+            <ion-col color="secondary" (tap)="pushPageItem(item)">
+              <ion-card>
+                <img src="{{item.url_image}}" />
+                <div class="card-title-small">{{item.bandename}}</div>
+              </ion-card>
+            </ion-col>
+          </div>
         </div>
       </div>
     </div>

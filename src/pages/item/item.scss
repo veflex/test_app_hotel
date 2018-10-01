@@ -1,0 +1,27 @@
+page-item {
+  .sub_header {
+    text-align: center;
+    background: $grey;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+  }
+
+  .toolbar-md,
+  .toolbar-ios {
+    padding: 0;
+  }
+
+  .toolbar-title-md,
+  .toolbar-title-ios {
+    text-align: center;
+  }
+
+  .item-ios.item-block .item-inner,
+  .item-md.item-block .item-inner {
+    border: 0;
+  }
+
+
+
+}

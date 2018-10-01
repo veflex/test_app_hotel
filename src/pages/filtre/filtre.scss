@@ -1,10 +1,16 @@
 page-filtre {
-
+  $segment-button-ios-toolbar-button-max-width: 200px;
+  $segment-button-md-toolbar-button-max-width: 200px;
 
   // STYLE FILTER TOOLBAR START
   .toolbar-ios .segment-ios,
   .toolbar-md .segment-md {
     background: $grey;
+  }
+
+  .toolbar-background-md,
+  .toolbar-background-ios {
+    background: #FFF;
   }
 
   .filter {
@@ -39,64 +45,70 @@ page-filtre {
   .toolbar-title-ios {
     text-align: center;
   }
-}
 
-// STYLE FILTER TOOLBAR END
-
-
-.item {
-  margin-bottom: 0px;
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-}
-
-.col {
-  padding: 0px;
-}
-
-/* list with all card */
-#list {
-  padding: 10px;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: -0.875em;
-  /* 30px */
-  -webkit-column-count: 2;
-  -webkit-column-gap: 0.875em;
-  /* 30px */
-  -webkit-column-fill: auto;
-  -moz-column-count: 2;
-  -moz-column-gap: 0.875em;
-  /* 30px */
-  -moz-column-fill: auto;
-  column-count: 2;
-  column-gap: 0.5em;
-  /* 30px */
-  column-fill: auto;
-}
-
-.card-background-page {
-
-  ion-card {
-    position: relative;
-    text-align: center;
-    overflow: unset;
+  .card-md,
+  .card-ios {
+    margin: 0% 0px 13px 0px;
+    width: calc(100% - 3%);
   }
 
+  // STYLE FILTER TOOLBAR END
 
 
-  /* -- position of title of card --*/
-  .card-title-small {
-    position: absolute;
-    top: 45%;
-    padding: 0px 1.5px 0px 1.5px;
-    font-size: 17px;
-    font-weight: 400;
-    width: 90%;
-    display: block;
-    margin-left: 5%;
-    color: #fff;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.4);
+  .item {
+    margin-bottom: 0px;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+  }
+
+  .col {
+    padding: 0px;
+  }
+
+  /* list with all card */
+  #list {
+    padding: 10px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: -0.875em;
+    /* 30px */
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0.875em;
+    /* 30px */
+    -webkit-column-fill: auto;
+    -moz-column-count: 2;
+    -moz-column-gap: 0.875em;
+    /* 30px */
+    -moz-column-fill: auto;
+    column-count: 2;
+    column-gap: 0.5em;
+    /* 30px */
+    column-fill: auto;
+  }
+
+  .card-background-page {
+
+    ion-card {
+      position: relative;
+      text-align: center;
+      overflow: unset;
+    }
+
+
+
+    /* -- position of title of card --*/
+    .card-title-small {
+      position: absolute;
+      top: 45%;
+      padding: 0px 1.5px 0px 1.5px;
+      font-size: 17px;
+      font-weight: 400;
+      width: 90%;
+      display: block;
+      margin-left: 5%;
+      color: #000;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
   }
 }

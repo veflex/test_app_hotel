@@ -10,8 +10,8 @@ export class MyRoomPage {
   item: any;
   constructor(public navCtrl: NavController,
     public param: NavParams) {
+    //get items pushed with the page
     this.item = this.param.get("all");
-    console.log();
 
   }
 

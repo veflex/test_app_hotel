@@ -3,7 +3,7 @@
   <ion-content>
     <ion-icon menuClose name="close" class="closeMenu"></ion-icon>
     <ion-list>
-      <button id={{p.id}} no-border menuClose ion-item *ngFor="let p of pages">
+      <button id={{p.id}} no-border menuClose ion-item *ngFor="let p of pages" (tap)="openPage(p)">
         <ion-icon name="radio-button-off" class="round"></ion-icon>
         {{p.title}}
       </button>
@@ -44,12 +44,12 @@
         <!--** second row  **-->
         <ion-row class="media-icons">
           <ion-col>
-            <a target="_blank" style="font-size:14px" (click)="openUrl('http://163.172.230.30:8000/culturmoovappli/CGU.pdf')">CGU</a>
+            <a target="_blank" style="font-size:14px">CGU</a>
           </ion-col>
-          <ion-col (click)="OpenApropos()">
+          <ion-col>
             A propos
           </ion-col>
-          <ion-col (click)="OpenContact()">
+          <ion-col>
             Contact
           </ion-col>
         </ion-row>

@@ -1,0 +1,74 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngIf="!isSeachBarOpened">Mercure Hotel</ion-title>
+    <ion-searchbar *ngIf="isSeachBarOpened" showCancelButton="true" (ionCancel)="isSeachBarOpened=false"></ion-searchbar>
+    <ion-buttons end>
+      <button ion-button icon-only *ngIf="!isSeachBarOpened" (tap)="isSeachBarOpened=true">
+        <ion-icon name="search" style="font-size: 30px;"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border>
+
+    <ion-item no-shadow class="sub_header">
+      Parcours thèmatiques
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+  <ion-card class="blur" (click)="ToHomePage('Archeologie')">
+    <img src="img/themes/Archeologie.jpg" />
+    <div class="card-title">Archéologie <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+    </div>
+  </ion-card>
+
+  <ion-card class="blur" (click)="ToHomePage('Archives')">
+    <img src="img/themes/Archives.jpg" />
+    <div class="card-title">Archives <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+    </div>
+  </ion-card>
+
+  <ion-card class="blur" (click)="ToHomePage('Artisanat')">
+    <img src="img/themes/Artisanat.jpg" />
+    <div class="card-title">Artisanat <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+    </div>
+  </ion-card>
+
+  <ion-card class="blur" (click)="ToHomePage('Contemporain')">
+    <img src="img/themes/ArtContemporain.jpg" />
+    <div class="card-title">Contemporain <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+    </div>
+  </ion-card>
+
+
+  <ion-card class="blur" (click)="ToHomePage('Monuments')">
+    <img src="img/themes/Monuments.jpg" />
+    <div class="card-title">Monuments <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+    </div>
+  </ion-card>
+
+  <ion-card class="blur" (click)="ToHomePage('Objets_du_quotidien')">
+    <img src="img/themes/Objetsduquotidien.jpg" />
+    <div class="card-title">Objets du quotidien <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+    </div>
+  </ion-card>
+
+  <ion-card class="blur" (click)="ToHomePage('Oeuvres_rares')">
+    <img src="img/themes/Oeuvresrares.jpg" />
+    <div class="card-title">Oeuvres rares <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+    </div>
+  </ion-card>
+
+  <ion-card class="blur" (click)="ToHomePage('Reserve_de_musees')">
+    <img src="img/themes/Reservesdemusees.jpg" />
+    <div class="card-title">Réserve de musées <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+    </div>
+  </ion-card>
+
+</ion-content>

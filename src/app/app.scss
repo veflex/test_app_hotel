@@ -60,3 +60,39 @@ a.item-ios:not([detail-none]) .item-inner {
   background: none;
   margin-left: 7%
 }
+
+//////////////////////Style logos start//////////////////////
+.footer {
+  height: 20%;
+}
+
+.toolbar-content {
+  height: 100%;
+}
+
+.toolbar {
+  height: 100%;
+}
+
+ion-grid.grid {
+  height: 100%;
+}
+
+.media-icons {
+  height: 100%;
+
+  ion-row {
+    height: 50%;
+  }
+
+  ion-col {
+    ion-icon {
+      background: $gold;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: white;
+      line-height: 30px;
+    }
+  }
+}

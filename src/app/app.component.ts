@@ -5,10 +5,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { FiltrePage } from './../pages/filtre/filtre';
 import { ProfilPage } from './../pages/profil/profil';
-import { ListPage } from './../pages/list/list';
 import { AccueilPage } from './../pages/accueil/accueil';
 import { MyRoomPage } from './../pages/my_room/my_room';
-
+import { ItemPage } from '../pages/item/item';
+import { ParcoursPage } from '../pages/parcours/parcours';
+import { AroundMeListPage } from '../pages/around_me/around-me-list';
 
 
 @Component({
@@ -17,7 +18,7 @@ import { MyRoomPage } from './../pages/my_room/my_room';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = AccueilPage;
+  rootPage: any = FiltrePage;
   public filtre: string;
   pages: Array<{ title: string, component: any, id: any }>;
   FiltrePageAround: "FiltrePageAround";
@@ -29,8 +30,8 @@ export class MyApp {
       { title: 'Profil', component: ProfilPage, id: "profil" },
       { title: 'My Room', component: FiltrePage, id: "my_room" },
       { title: 'Autours de moi', component: FiltrePage, id: "around_me" },
-      { title: 'Mes coups de coeur', component: ListPage, id: "crush" },
-      { title: 'Parcours', component: ListPage, id: "where_to" },
+      { title: 'Mes coups de coeur', component: FiltrePage, id: "crush" },
+      { title: 'Parcours', component: ParcoursPage, id: "where_to" },
 
       //      { title: 'Autour de moi', component: AroundMePage },
       //      { title: 'Mes coups de coeur', component: MyCrushsPage },
